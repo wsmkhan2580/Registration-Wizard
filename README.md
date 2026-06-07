@@ -8,7 +8,7 @@ https://registration-wizard-beta.vercel.app/
 
 ## 📂 GitHub Repository
 
-https://github.com/your-username/your-repo-name
+https://github.com/wsmkhan2580/Registration-Wizard.git
 
 ## ✨ Features
 
