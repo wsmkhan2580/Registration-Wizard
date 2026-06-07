@@ -88,7 +88,7 @@ export default function App() {
               </svg>
             </div>
             <span className="font-display text-sm font-medium text-white/60 tracking-wide">
-              Phase 3
+              Registration-Wizard
             </span>
           </div>
         )}
