@@ -1,54 +1,47 @@
-# Prompts.md — AI Prompting Reference
+# Prompts.md
 
-This file documents the prompts and design decisions used to generate
-and iterate on the Phase 3 Registration Wizard project.
+## Prompt 1 — Project Setup
 
-## Primary Generation Prompt (Summary)
+Build a modern multi-step Registration Wizard using React, Vite, and Tailwind CSS. The application should have a professional UI, responsive layout, reusable components, and clean folder structure suitable for production-level projects.
 
-> Generate a complete Phase 3 Registration Wizard in React + Tailwind CSS.
-> Use React Hook Form + Zod for validation. Build a 3-step wizard (Personal
-> Info → Account Details → Review & Submit). Dark glassmorphism UI.
-> Animated progress bar. Show/hide password toggles. Real-time validation.
-> Success screen after submit. Mobile-first. Production-ready code.
+---
 
-## Component Prompts
+## Prompt 2 — Form Validation
 
-### App.jsx
-> Compose a multi-step wizard shell with direction-aware slide animations,
-> animated glassmorphism card, ambient background orbs, and a brand mark.
+Implement form validation using React Hook Form and Zod. Validate inputs in real time, display clear error messages, and prevent users from progressing to the next step until all required fields are valid.
 
-### Step1.jsx
-> Create a Personal Information form step with RHF + Zod.
-> Fields: firstName, lastName, dateOfBirth. Disabled Next until valid.
+---
 
-### Step2.jsx
-> Create Account Details with RHF + Zod. Fields: email, password, confirmPassword.
-> Show/hide password toggle. Password strength 4-bar meter.
+## Prompt 3 — Multi-Step Navigation
 
-### Step3.jsx
-> Review & Submit step. Display all formData grouped. Mask password. Back + Submit.
+Create a 3-step registration workflow:
 
-### ProgressBar.jsx
-> Animated step indicator: counter text, step dots with checkmarks, fill bar.
+1. Personal Information
+2. Account Details
+3. Review & Submit
 
-### SuccessScreen.jsx
-> Animated success with pulsing ring, shimmer heading, account summary, CTA.
+Allow users to move forward and backward between steps while preserving previously entered data.
 
-### useWizard.js
-> Hook tracking currentStep, formData, navDirection, isComplete.
-> Expose nextStep, prevStep, submitForm.
+---
 
-### schema.js
-> Zod schemas: step1 (name + dob with age >=13), step2 (email, password rules, confirm match).
+## Prompt 4 — Password Experience
 
-## Design Decisions
+Add password and confirm password fields with show/hide visibility toggles. Include a dynamic password strength indicator that evaluates password quality based on length and character variety.
 
-| Decision | Reasoning |
-|---|---|
-| Glassmorphism dark theme | Premium SaaS feel |
-| Playfair Display headings | Distinctive, avoids generic fonts |
-| Direction-aware animations | Communicates spatial navigation |
-| Password strength meter | UX polish beyond minimum spec |
-| State lifting via useWizard | Clean separation of concerns |
-| Per-step Zod schemas | Granular validation without full-form overhead |
-| Inline SVG icons | Zero external icon dependency |
+---
+
+## Prompt 5 — User Interface Design
+
+Design a modern dark-themed interface using glassmorphism effects, gradient accents, smooth shadows, and subtle animations. The design should feel similar to premium SaaS onboarding experiences.
+
+---
+
+## Prompt 6 — Progress Tracking
+
+Create an animated progress bar that visually indicates the user's current step. Include step indicators, completed states, and smooth transitions when navigating between sections.
+
+---
+
+## Prompt 7 — Success State
+
+After successful form submission, display an animated success screen showing a confirmation message and a summary of the submitted information. The transition should feel polished and professional.
